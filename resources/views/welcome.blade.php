@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>InternshipHub | Internship Management System</title>
+    <title>StaffHub | Staff Management System</title>
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
@@ -26,16 +26,16 @@
         <a href="{{ url('/') }}" class="landing-brand">
 
             <div class="landing-brand-icon">
-                <i class="fa-solid fa-graduation-cap"></i>
+                <i class="fa-solid fa-users-gear"></i>
             </div>
 
             <div>
                 <div class="landing-brand-name">
-                    InternshipHub
+                    StaffHub
                 </div>
 
                 <span class="landing-brand-subtitle">
-                    Internship Management System
+                    Staff Management System
                 </span>
             </div>
 
@@ -50,7 +50,7 @@
             </a>
 
             <a href="#features">
-                About
+                Features
             </a>
 
             <a href="#contact">
@@ -122,10 +122,7 @@
 
     <div class="landing-container landing-hero-grid">
 
-
-        {{-- =====================
-             LEFT CONTENT
-        ====================== --}}
+        {{-- LEFT CONTENT --}}
         <div class="landing-hero-content">
 
             <div class="landing-badge">
@@ -133,27 +130,28 @@
                 <i class="fa-solid fa-star"></i>
 
                 <span>
-                    Your Future Starts Here
+                    Simple • Smart • Organized
                 </span>
 
             </div>
 
 
             <h1>
-                Turn Your
+                Manage Your
 
                 <span>
-                    Internship Dreams
+                    Workplace
                 </span>
 
-                into Reality
+                All in One Place
             </h1>
 
 
             <p class="landing-hero-description">
 
-                A simple and efficient platform to manage your
-                internship journey from application to completion.
+                A simple and efficient platform for managing
+                staff information, leave requests, announcements
+                and daily workplace needs.
 
             </p>
 
@@ -178,7 +176,7 @@
                         <a href="{{ route('login') }}"
                            class="landing-btn landing-btn-primary landing-btn-large">
 
-                            <i class="fa-solid fa-arrow-right"></i>
+                            <i class="fa-solid fa-arrow-right-to-bracket"></i>
                             Get Started
 
                         </a>
@@ -201,11 +199,11 @@
             {{-- Motto --}}
             <div class="landing-motto">
 
-                <span>Learn</span>
+                <span>Connect</span>
 
                 <i class="fa-solid fa-circle"></i>
 
-                <span>Experience</span>
+                <span>Manage</span>
 
                 <i class="fa-solid fa-circle"></i>
 
@@ -216,9 +214,7 @@
         </div>
 
 
-        {{-- =====================
-             RIGHT IMAGE
-        ====================== --}}
+        {{-- RIGHT VISUAL --}}
         <div class="landing-hero-visual">
 
             <div class="landing-visual-blob"></div>
@@ -230,8 +226,8 @@
                 <i class="fa-regular fa-heart"></i>
 
                 <span>
-                    Good Skills<br>
-                    Brighter Tomorrow
+                    Better Team<br>
+                    Better Workplace
                 </span>
 
             </div>
@@ -244,21 +240,20 @@
             </div>
 
 
-            {{-- Student Image --}}
-            {{-- Student Image --}}
-<img
-    src="{{ asset('images/download (1).png') }}"
-    alt="Students preparing for internship"
-    class="landing-student-image"
->
+            {{-- Staff Image --}}
+            <img
+                src="{{ asset('images/download (1).png') }}"
+                alt="Staff management team"
+                class="landing-student-image"
+            >
 
 
-            {{-- Small motivational text --}}
+            {{-- Motivational text --}}
             <div class="landing-doodle landing-doodle-right">
 
                 <span>
-                    Your Journey.<br>
-                    Brighter Future.
+                    Work Smarter.<br>
+                    Grow Together.
                 </span>
 
                 <i class="fa-regular fa-face-smile"></i>
@@ -266,7 +261,6 @@
             </div>
 
 
-            {{-- Yellow curved decoration --}}
             <div class="landing-yellow-line"></div>
 
         </div>
@@ -286,85 +280,77 @@
         <div class="landing-feature-grid">
 
 
-            {{-- Apply --}}
+            {{-- Profile --}}
             <div class="landing-feature-card feature-blue">
 
                 <div class="landing-feature-icon blue">
-
-                    <i class="fa-regular fa-file-lines"></i>
-
+                    <i class="fa-regular fa-user"></i>
                 </div>
 
                 <h3>
-                    Apply Easily
+                    Staff Profile
                 </h3>
 
                 <p>
-                    Submit your application
-                    and documents online.
+                    View and manage personal
+                    and employment information.
                 </p>
 
             </div>
 
 
-            {{-- Track --}}
+            {{-- Leave --}}
             <div class="landing-feature-card feature-green">
 
                 <div class="landing-feature-icon green">
-
-                    <i class="fa-solid fa-magnifying-glass"></i>
-
+                    <i class="fa-regular fa-calendar-check"></i>
                 </div>
 
                 <h3>
-                    Track Progress
+                    Leave Management
                 </h3>
 
                 <p>
-                    Check your application
-                    and placement status.
+                    Apply for leave and easily
+                    track request status.
                 </p>
 
             </div>
 
 
-            {{-- Logbook --}}
+            {{-- Announcement --}}
             <div class="landing-feature-card feature-purple">
 
                 <div class="landing-feature-icon purple">
-
-                    <i class="fa-solid fa-book-open"></i>
-
+                    <i class="fa-solid fa-bullhorn"></i>
                 </div>
 
                 <h3>
-                    Manage Logbook
+                    Announcements
                 </h3>
 
                 <p>
-                    Record your daily activities
-                    and submit reports.
+                    Stay updated with important
+                    workplace news and notices.
                 </p>
 
             </div>
 
 
-            {{-- Evaluation --}}
+            {{-- Management --}}
             <div class="landing-feature-card feature-orange">
 
                 <div class="landing-feature-icon orange">
-
-                    <i class="fa-regular fa-star"></i>
-
+                    <i class="fa-solid fa-users-gear"></i>
                 </div>
 
                 <h3>
-                    Get Evaluated
+                    Easy Management
                 </h3>
 
                 <p>
-                    Receive feedback from
-                    your supervisors.
+                    Manage staff records efficiently
+                    through one organized system.
                 </p>
 
             </div>
@@ -385,21 +371,20 @@
 
     <div class="landing-footer-container">
 
-
         <a href="{{ url('/') }}"
            class="landing-footer-brand">
 
-            <i class="fa-solid fa-graduation-cap"></i>
+            <i class="fa-solid fa-users-gear"></i>
 
             <strong>
-                InternshipHub
+                StaffHub
             </strong>
 
         </a>
 
 
         <p>
-            © {{ date('Y') }} InternshipHub.
+            © {{ date('Y') }} StaffHub.
             All rights reserved.
         </p>
 

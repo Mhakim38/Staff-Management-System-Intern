@@ -11,12 +11,12 @@
             <a href="{{ url('/') }}" class="auth-brand">
 
                 <div class="auth-brand-icon">
-                    <i class="fa-solid fa-graduation-cap"></i>
+                    <i class="fa-solid fa-users-gear"></i>
                 </div>
 
                 <div>
-                    <strong>InternshipHub</strong>
-                    <span>Internship Management System</span>
+                    <strong>StaffHub</strong>
+                    <span>Staff Management System</span>
                 </div>
 
             </a>
@@ -27,30 +27,32 @@
 
                 <div class="auth-badge">
                     <i class="fa-solid fa-sparkles"></i>
-                    Get Started
+                    Join StaffHub
                 </div>
 
                 <h1>
-                    Start Your
-                    <span>Internship Journey.</span>
+                    Start Managing
+                    <span>Your Work Life.</span>
                 </h1>
 
                 <p>
-                    Create your account and get ready to manage
-                    your internship journey in one place.
+                    Create your staff account to manage your profile,
+                    leave requests and stay connected with your workplace.
                 </p>
 
 
                 <div class="auth-motto">
-                    <span>Learn</span>
+
+                    <span>Connect</span>
 
                     <i class="fa-solid fa-circle"></i>
 
-                    <span>Experience</span>
+                    <span>Manage</span>
 
                     <i class="fa-solid fa-circle"></i>
 
                     <span>Grow</span>
+
                 </div>
 
             </div>
@@ -74,7 +76,7 @@
                     <i class="fa-solid fa-user-plus"></i>
                 </div>
 
-                <h2>Create Account</h2>
+                <h2>Create Staff Account</h2>
 
                 <p>
                     Fill in your details to get started.
@@ -216,7 +218,7 @@
                     class="auth-login-button"
                 >
 
-                    Create Account
+                    Create Staff Account
 
                     <i class="fa-solid fa-arrow-right"></i>
 

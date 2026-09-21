@@ -2,24 +2,31 @@
 
     <x-slot name="header">
         <div class="dashboard-header">
+
             <div>
-                <p class="dashboard-eyebrow">INTERNSHIPHUB</p>
-                <h2>Student Dashboard</h2>
+                <p class="dashboard-eyebrow">STAFFHUB</p>
+
+                <h2>Staff Dashboard</h2>
+
                 <p class="dashboard-header-text">
-                    Manage and track your internship journey.
+                    Manage your profile, leave requests and workplace updates.
                 </p>
             </div>
 
+
             <div class="dashboard-user">
+
                 <div class="dashboard-avatar">
                     {{ strtoupper(substr(Auth::user()->name, 0, 1)) }}
                 </div>
 
                 <div>
                     <strong>{{ Auth::user()->name }}</strong>
-                    <span>Student</span>
+                    <span>Staff</span>
                 </div>
+
             </div>
+
         </div>
     </x-slot>
 
@@ -28,13 +35,17 @@
 
         <div class="dashboard-container">
 
-            {{-- Welcome Section --}}
+
+            {{-- =====================================================
+                 WELCOME SECTION
+            ===================================================== --}}
             <div class="welcome-card">
 
                 <div class="welcome-content">
+
                     <span class="welcome-label">
-                        <i class="fa-solid fa-graduation-cap"></i>
-                        Student Portal
+                        <i class="fa-solid fa-user-tie"></i>
+                        Staff Portal
                     </span>
 
                     <h1>
@@ -42,93 +53,127 @@
                     </h1>
 
                     <p>
-                        Track your internship application, placement,
-                        logbook and evaluation from one place.
+                        Manage your profile, submit leave requests
+                        and stay updated with the latest workplace announcements.
                     </p>
 
-                    <a href="#internship-overview" class="btn btn-primary">
-                        View Internship Progress
+                    <a href="#staff-overview" class="btn btn-primary">
+                        View Overview
                         <i class="fa-solid fa-arrow-right"></i>
                     </a>
+
                 </div>
 
+
                 <div class="welcome-icon">
-                    <i class="fa-solid fa-user-graduate"></i>
+                    <i class="fa-solid fa-users"></i>
                 </div>
 
             </div>
 
 
-            {{-- Internship Overview --}}
-            <div class="dashboard-section" id="internship-overview">
+
+            {{-- =====================================================
+                 STAFF OVERVIEW
+            ===================================================== --}}
+            <div class="dashboard-section" id="staff-overview">
 
                 <div class="dashboard-section-title">
+
                     <div>
-                        <h2>Internship Overview</h2>
-                        <p>Quick overview of your internship progress.</p>
+                        <h2>Staff Overview</h2>
+
+                        <p>
+                            Here's a quick overview of your account.
+                        </p>
                     </div>
+
                 </div>
 
 
                 <div class="dashboard-stats">
 
+
+                    {{-- Profile --}}
                     <div class="stat-card">
+
                         <div class="stat-icon blue">
-                            <i class="fa-regular fa-file-lines"></i>
+                            <i class="fa-regular fa-user"></i>
                         </div>
 
                         <div>
-                            <span class="stat-label">Application</span>
-                            <h3>Not Submitted</h3>
-                            <span class="status status-pending">
-                                Pending
-                            </span>
-                        </div>
-                    </div>
+                            <span class="stat-label">My Profile</span>
 
+                            <h3>Profile Information</h3>
 
-                    <div class="stat-card">
-                        <div class="stat-icon green">
-                            <i class="fa-solid fa-building"></i>
-                        </div>
-
-                        <div>
-                            <span class="stat-label">Placement</span>
-                            <h3>Not Assigned</h3>
-                            <span class="status status-waiting">
-                                Waiting
-                            </span>
-                        </div>
-                    </div>
-
-
-                    <div class="stat-card">
-                        <div class="stat-icon purple">
-                            <i class="fa-solid fa-book-open"></i>
-                        </div>
-
-                        <div>
-                            <span class="stat-label">Logbook</span>
-                            <h3>0 Entries</h3>
                             <span class="status status-progress">
-                                Not Started
+                                Active
                             </span>
                         </div>
+
                     </div>
 
 
+
+                    {{-- Leave Balance --}}
                     <div class="stat-card">
-                        <div class="stat-icon orange">
-                            <i class="fa-solid fa-star"></i>
+
+                        <div class="stat-icon green">
+                            <i class="fa-regular fa-calendar-check"></i>
                         </div>
 
                         <div>
-                            <span class="stat-label">Evaluation</span>
-                            <h3>Not Available</h3>
+                            <span class="stat-label">Leave Balance</span>
+
+                            <h3>8 Days</h3>
+
+                            <span class="status status-waiting">
+                                Available
+                            </span>
+                        </div>
+
+                    </div>
+
+
+
+                    {{-- Pending Leave --}}
+                    <div class="stat-card">
+
+                        <div class="stat-icon purple">
+                            <i class="fa-regular fa-clock"></i>
+                        </div>
+
+                        <div>
+                            <span class="stat-label">Leave Request</span>
+
+                            <h3>1 Pending</h3>
+
                             <span class="status status-pending">
                                 Pending
                             </span>
                         </div>
+
+                    </div>
+
+
+
+                    {{-- Announcement --}}
+                    <div class="stat-card">
+
+                        <div class="stat-icon orange">
+                            <i class="fa-solid fa-bullhorn"></i>
+                        </div>
+
+                        <div>
+                            <span class="stat-label">Announcements</span>
+
+                            <h3>3 New</h3>
+
+                            <span class="status status-progress">
+                                Updates
+                            </span>
+                        </div>
+
                     </div>
 
                 </div>
@@ -136,207 +181,224 @@
             </div>
 
 
-            {{-- Main Dashboard Content --}}
+
+            {{-- =====================================================
+                 MAIN DASHBOARD CONTENT
+            ===================================================== --}}
             <div class="dashboard-content-grid">
 
-                {{-- Internship Progress --}}
+
+                {{-- Recent Leave Requests --}}
                 <div class="dashboard-panel">
 
                     <div class="panel-header">
+
                         <div>
-                            <h2>Internship Progress</h2>
-                            <p>Complete each step of your internship.</p>
+                            <h2>Recent Leave Requests</h2>
+
+                            <p>
+                                Track your latest leave applications.
+                            </p>
                         </div>
 
-                        <i class="fa-solid fa-chart-line panel-header-icon"></i>
+                        <i class="fa-regular fa-calendar panel-header-icon"></i>
+
                     </div>
+
 
 
                     <div class="progress-list">
 
+
+                        {{-- Leave 1 --}}
                         <div class="progress-item">
 
                             <div class="progress-circle current">
-                                1
+                                <i class="fa-solid fa-plane"></i>
                             </div>
 
                             <div class="progress-info">
-                                <h3>Internship Application</h3>
+
+                                <h3>Annual Leave</h3>
+
                                 <p>
-                                    Submit your internship application
-                                    and required documents.
+                                    15 October 2026 • 2 Days
                                 </p>
+
                             </div>
 
-                            <a href="#" class="progress-action">
-                                Apply
-                                <i class="fa-solid fa-chevron-right"></i>
-                            </a>
-
-                        </div>
-
-
-                        <div class="progress-item">
-
-                            <div class="progress-circle">
-                                2
-                            </div>
-
-                            <div class="progress-info">
-                                <h3>Application Approval</h3>
-                                <p>
-                                    Wait for your internship coordinator
-                                    to review your application.
-                                </p>
-                            </div>
-
-                            <span class="progress-disabled">
-                                Locked
+                            <span class="status status-pending">
+                                Pending
                             </span>
 
                         </div>
 
 
+
+                        {{-- Leave 2 --}}
                         <div class="progress-item">
 
                             <div class="progress-circle">
-                                3
+                                <i class="fa-solid fa-notes-medical"></i>
                             </div>
 
                             <div class="progress-info">
-                                <h3>Company Placement</h3>
+
+                                <h3>Medical Leave</h3>
+
                                 <p>
-                                    View your approved internship
-                                    placement information.
+                                    2 September 2026 • 1 Day
                                 </p>
+
                             </div>
 
-                            <span class="progress-disabled">
-                                Locked
+                            <span class="status status-waiting">
+                                Approved
                             </span>
 
                         </div>
 
 
+
+                        {{-- Leave 3 --}}
                         <div class="progress-item">
 
                             <div class="progress-circle">
-                                4
+                                <i class="fa-regular fa-calendar"></i>
                             </div>
 
                             <div class="progress-info">
-                                <h3>Internship & Logbook</h3>
+
+                                <h3>Annual Leave</h3>
+
                                 <p>
-                                    Record your daily activities
-                                    throughout your internship.
+                                    10 August 2026 • 1 Day
                                 </p>
+
                             </div>
 
-                            <span class="progress-disabled">
-                                Locked
-                            </span>
-
-                        </div>
-
-
-                        <div class="progress-item">
-
-                            <div class="progress-circle">
-                                5
-                            </div>
-
-                            <div class="progress-info">
-                                <h3>Evaluation</h3>
-                                <p>
-                                    View supervisor feedback and
-                                    internship evaluation.
-                                </p>
-                            </div>
-
-                            <span class="progress-disabled">
-                                Locked
+                            <span class="status status-progress">
+                                Completed
                             </span>
 
                         </div>
 
                     </div>
 
+
+                    <a href="#"
+                       class="progress-action"
+                       style="margin-top: 15px;">
+
+                        View Leave History
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
                 </div>
 
 
-                {{-- Quick Actions --}}
+
+                {{-- =====================================================
+                     SIDEBAR
+                ===================================================== --}}
                 <div class="dashboard-sidebar">
 
+
+                    {{-- Quick Actions --}}
                     <div class="dashboard-panel">
 
                         <div class="panel-header">
+
                             <div>
                                 <h2>Quick Actions</h2>
-                                <p>Frequently used features.</p>
+
+                                <p>
+                                    Frequently used features.
+                                </p>
                             </div>
+
                         </div>
 
 
                         <div class="quick-actions">
 
+
+                            {{-- Profile --}}
                             <a href="#" class="quick-action">
+
                                 <div class="quick-icon blue">
-                                    <i class="fa-regular fa-file-lines"></i>
+                                    <i class="fa-regular fa-user"></i>
                                 </div>
 
                                 <div>
-                                    <strong>Application</strong>
-                                    <span>Submit internship application</span>
+                                    <strong>My Profile</strong>
+                                    <span>View and update your details</span>
                                 </div>
 
                                 <i class="fa-solid fa-chevron-right"></i>
+
                             </a>
 
 
+
+                            {{-- Apply Leave --}}
                             <a href="#" class="quick-action">
-                                <div class="quick-icon purple">
-                                    <i class="fa-solid fa-book-open"></i>
-                                </div>
 
-                                <div>
-                                    <strong>My Logbook</strong>
-                                    <span>Manage daily activities</span>
-                                </div>
-
-                                <i class="fa-solid fa-chevron-right"></i>
-                            </a>
-
-
-                            <a href="#" class="quick-action">
                                 <div class="quick-icon green">
-                                    <i class="fa-solid fa-building"></i>
+                                    <i class="fa-solid fa-calendar-plus"></i>
                                 </div>
 
                                 <div>
-                                    <strong>Placement</strong>
-                                    <span>View company information</span>
+                                    <strong>Apply Leave</strong>
+                                    <span>Submit a new leave request</span>
                                 </div>
 
                                 <i class="fa-solid fa-chevron-right"></i>
+
                             </a>
 
 
+
+                            {{-- Leave History --}}
                             <a href="#" class="quick-action">
-                                <div class="quick-icon orange">
-                                    <i class="fa-solid fa-star"></i>
+
+                                <div class="quick-icon purple">
+                                    <i class="fa-solid fa-clock-rotate-left"></i>
                                 </div>
 
                                 <div>
-                                    <strong>Evaluation</strong>
-                                    <span>View your evaluation</span>
+                                    <strong>Leave History</strong>
+                                    <span>View your leave requests</span>
                                 </div>
 
                                 <i class="fa-solid fa-chevron-right"></i>
+
+                            </a>
+
+
+
+                            {{-- Announcement --}}
+                            <a href="#" class="quick-action">
+
+                                <div class="quick-icon orange">
+                                    <i class="fa-solid fa-bullhorn"></i>
+                                </div>
+
+                                <div>
+                                    <strong>Announcements</strong>
+                                    <span>View workplace updates</span>
+                                </div>
+
+                                <i class="fa-solid fa-chevron-right"></i>
+
                             </a>
 
                         </div>
 
                     </div>
+
 
 
                     {{-- Help Card --}}
@@ -347,17 +409,19 @@
                         </div>
 
                         <div>
+
                             <h3>Need Help?</h3>
 
                             <p>
-                                Contact your internship coordinator if
-                                you need assistance with the system.
+                                Contact the administrator if you need
+                                assistance with your account or the system.
                             </p>
 
                             <a href="#">
-                                Contact Coordinator
+                                Contact Admin
                                 <i class="fa-solid fa-arrow-right"></i>
                             </a>
+
                         </div>
 
                     </div>

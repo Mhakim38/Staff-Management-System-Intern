@@ -6,14 +6,16 @@
         <div class="auth-login-left">
 
             <a href="{{ url('/') }}" class="auth-brand">
+
                 <div class="auth-brand-icon">
-                    <i class="fa-solid fa-graduation-cap"></i>
+                    <i class="fa-solid fa-users-gear"></i>
                 </div>
 
                 <div>
-                    <strong>InternshipHub</strong>
-                    <span>Internship Management System</span>
+                    <strong>StaffHub</strong>
+                    <span>Staff Management System</span>
                 </div>
+
             </a>
 
 
@@ -25,19 +27,19 @@
                 </div>
 
                 <h1>
-                    Continue Your
-                    <span>Internship Journey.</span>
+                    Manage Your
+                    <span>Workplace Smarter.</span>
                 </h1>
 
                 <p>
-                    Log in to manage your internship and
-                    keep track of your progress.
+                    Log in to access your account, manage your profile,
+                    leave requests and stay updated with workplace announcements.
                 </p>
 
                 <div class="auth-motto">
-                    <span>Learn</span>
+                    <span>Connect</span>
                     <i class="fa-solid fa-circle"></i>
-                    <span>Experience</span>
+                    <span>Manage</span>
                     <i class="fa-solid fa-circle"></i>
                     <span>Grow</span>
                 </div>
