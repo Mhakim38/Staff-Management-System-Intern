@@ -1,58 +1,153 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
-
 <p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+    <h1 align="center">👥 StaffHub</h1>
+    <p align="center">
+        <strong>Staff Management System</strong>
+    </p>
 </p>
 
-## About Laravel
+<p align="center">
+    A simple and organized web-based system for managing staff information,
+    leave requests and workplace announcements.
+</p>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## About StaffHub
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+StaffHub is a web-based **Staff Management System** developed using Laravel.
 
-## Learning Laravel
+The system provides a centralized platform for managing staff information and workplace-related activities. It is designed for two types of users: **Admin** and **Staff**, with different access and functionalities.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+StaffHub aims to make staff management simpler, more organized and efficient.
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## User Roles
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
+### 👨‍💼 Staff
 
-## Agentic Development
+Staff members can:
 
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
+- View and update their profile
+- View employment information
+- Apply for leave
+- Track leave request status
+- View leave history
+- View workplace announcements
+- Change their password
+
+### 🛠️ Admin
+
+Administrators can:
+
+- Add new staff
+- View staff information
+- Update staff information
+- Delete staff records
+- Manage leave requests
+- Approve or reject leave applications
+- Manage workplace announcements
+- View administrative information
+
+## CRUD Functionality
+
+The main CRUD functionality of the system focuses on **Staff Management**:
+
+- **Create** — Add new staff records
+- **Read** — View staff information
+- **Update** — Edit existing staff information
+- **Delete** — Remove staff records
+
+## Technologies Used
+
+StaffHub is developed using:
+
+- Laravel
+- PHP
+- MySQL
+- Blade
+- HTML
+- CSS
+- JavaScript
+- Vite
+- Font Awesome
+
+## Installation
+
+Clone the repository:
 
 ```bash
-composer require laravel/boost --dev
-
-php artisan boost:install
+git clone https://github.com/Mhakim38/Staff-Management-System-Intern.git
 ```
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
+Navigate to the project directory:
 
-## Contributing
+```bash
+cd Staff-Management-System-Intern
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Install PHP dependencies:
 
-## Code of Conduct
+```bash
+composer install
+```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Install frontend dependencies:
 
-## Security Vulnerabilities
+```bash
+npm install
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Create the environment file:
+
+```bash
+cp .env.example .env
+```
+
+Generate the application key:
+
+```bash
+php artisan key:generate
+```
+
+Configure your database connection inside the `.env` file.
+
+Then run the migrations:
+
+```bash
+php artisan migrate
+```
+
+Start Vite:
+
+```bash
+npm run dev
+```
+
+Run the Laravel development server:
+
+```bash
+php artisan serve
+```
+
+## Project Progress
+
+- [x] Landing Page
+- [x] Login Page
+- [x] Registration Page
+- [x] Staff Dashboard Interface
+- [ ] Admin and Staff Role Management
+- [ ] Staff CRUD
+- [ ] Staff Profile Management
+- [ ] Leave Management
+- [ ] Announcement Management
+- [ ] Admin Dashboard
+- [ ] Database Integration
+
+## Project Purpose
+
+This system is developed as an internship project to demonstrate the implementation of a web-based Staff Management System using Laravel.
+
+The project focuses on staff record management, role-based access, leave management and workplace communication through a simple and user-friendly interface.
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+This project is developed for educational and internship purposes.
