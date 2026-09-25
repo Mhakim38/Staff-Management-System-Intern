@@ -286,14 +286,14 @@
                     </div>
 
 
-                    <a href="#"
-                       class="progress-action"
-                       style="margin-top: 15px;">
-
+                    <a
+                        href="{{ route('leave.index') }}"
+                        class="progress-action"
+                        style="margin-top: 15px;"
+                        >
                         View Leave History
 
                         <i class="fa-solid fa-arrow-right"></i>
-
                     </a>
 
                 </div>
@@ -326,7 +326,7 @@
 
 
                             {{-- Profile --}}
-                            <a href="#" class="quick-action">
+                            <a href="{{ route('profile.edit') }}" class="quick-action">
 
                                 <div class="quick-icon blue">
                                     <i class="fa-regular fa-user"></i>
@@ -344,7 +344,7 @@
 
 
                             {{-- Apply Leave --}}
-                            <a href="#" class="quick-action">
+                            <a href="{{ route('leave.create') }}" class="quick-action">
 
                                 <div class="quick-icon green">
                                     <i class="fa-solid fa-calendar-plus"></i>
@@ -362,7 +362,7 @@
 
 
                             {{-- Leave History --}}
-                            <a href="#" class="quick-action">
+                            <a href="{{ route('leave.index') }}" class="quick-action">
 
                                 <div class="quick-icon purple">
                                     <i class="fa-solid fa-clock-rotate-left"></i>
@@ -380,7 +380,7 @@
 
 
                             {{-- Announcement --}}
-                            <a href="#" class="quick-action">
+                            <a href="{{ route('announcements.index') }}" class="quick-action">
 
                                 <div class="quick-icon orange">
                                     <i class="fa-solid fa-bullhorn"></i>

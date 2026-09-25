@@ -1,48 +1,143 @@
 <section>
-    <header>
-        <h2 class="text-lg font-medium text-gray-900">
-            {{ __('Update Password') }}
-        </h2>
 
-        <p class="mt-1 text-sm text-gray-600">
-            {{ __('Ensure your account is using a long, random password to stay secure.') }}
-        </p>
-    </header>
+    <div class="profile-section-header">
 
-    <form method="post" action="{{ route('password.update') }}" class="mt-6 space-y-6">
+        <div class="profile-section-heading">
+
+            <div class="profile-section-icon profile-security-icon">
+                <i class="fa-solid fa-shield-halved"></i>
+            </div>
+
+            <div>
+                <h2>Security</h2>
+
+                <p>
+                    Keep your account secure by using a strong password.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <form
+        method="post"
+        action="{{ route('password.update') }}"
+        class="profile-form"
+    >
+
         @csrf
         @method('put')
 
-        <div>
-            <x-input-label for="update_password_current_password" :value="__('Current Password')" />
-            <x-text-input id="update_password_current_password" name="current_password" type="password" class="mt-1 block w-full" autocomplete="current-password" />
-            <x-input-error :messages="$errors->updatePassword->get('current_password')" class="mt-2" />
+
+        <div class="profile-field profile-field-full">
+
+            <label for="update_password_current_password">
+                Current Password
+            </label>
+
+            <div class="profile-input">
+
+                <i class="fa-solid fa-lock"></i>
+
+                <input
+                    id="update_password_current_password"
+                    name="current_password"
+                    type="password"
+                    placeholder="Enter current password"
+                    autocomplete="current-password"
+                >
+
+            </div>
+
+            <x-input-error
+                :messages="$errors->updatePassword->get('current_password')"
+                class="profile-error"
+            />
+
         </div>
 
-        <div>
-            <x-input-label for="update_password_password" :value="__('New Password')" />
-            <x-text-input id="update_password_password" name="password" type="password" class="mt-1 block w-full" autocomplete="new-password" />
-            <x-input-error :messages="$errors->updatePassword->get('password')" class="mt-2" />
+
+        <div class="profile-form-grid">
+
+            <div class="profile-field">
+
+                <label for="update_password_password">
+                    New Password
+                </label>
+
+                <div class="profile-input">
+
+                    <i class="fa-solid fa-key"></i>
+
+                    <input
+                        id="update_password_password"
+                        name="password"
+                        type="password"
+                        placeholder="Enter new password"
+                        autocomplete="new-password"
+                    >
+
+                </div>
+
+                <x-input-error
+                    :messages="$errors->updatePassword->get('password')"
+                    class="profile-error"
+                />
+
+            </div>
+
+
+            <div class="profile-field">
+
+                <label for="update_password_password_confirmation">
+                    Confirm New Password
+                </label>
+
+                <div class="profile-input">
+
+                    <i class="fa-solid fa-check"></i>
+
+                    <input
+                        id="update_password_password_confirmation"
+                        name="password_confirmation"
+                        type="password"
+                        placeholder="Repeat new password"
+                        autocomplete="new-password"
+                    >
+
+                </div>
+
+            </div>
+
         </div>
 
-        <div>
-            <x-input-label for="update_password_password_confirmation" :value="__('Confirm Password')" />
-            <x-text-input id="update_password_password_confirmation" name="password_confirmation" type="password" class="mt-1 block w-full" autocomplete="new-password" />
-            <x-input-error :messages="$errors->updatePassword->get('password_confirmation')" class="mt-2" />
-        </div>
 
-        <div class="flex items-center gap-4">
-            <x-primary-button>{{ __('Save') }}</x-primary-button>
+        <div class="profile-form-footer">
 
             @if (session('status') === 'password-updated')
-                <p
-                    x-data="{ show: true }"
-                    x-show="show"
-                    x-transition
-                    x-init="setTimeout(() => show = false, 2000)"
-                    class="text-sm text-gray-600"
-                >{{ __('Saved.') }}</p>
+
+                <span class="profile-saved">
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                    Password updated
+                </span>
+
             @endif
+
+
+            <button
+                type="submit"
+                class="btn btn-primary"
+            >
+                <i class="fa-solid fa-shield-halved"></i>
+                Update Password
+            </button>
+
         </div>
+
     </form>
+
 </section>
